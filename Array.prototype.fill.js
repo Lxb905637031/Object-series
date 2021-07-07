@@ -1,12 +1,7 @@
 // 实现Array.prototype.fill
 
 Array.prototype.myFill = function() {
-    let value
-    if (!arguments[0]) {
-        value = arguments[0] === 0 ? 0 : undefined
-    } else {
-        value = arguments[0]
-    }
+    const value = arguments[0] >> undefined
     let start = arguments[1] >> 0
     let end = arguments[2]
 
@@ -38,4 +33,4 @@ Array.prototype.myFill = function() {
 }
 
 const arr = [1, 2, 3, 4, 5]
-console.log(arr.myFill())
+console.log(arr.myFill(0, 0, 3))
