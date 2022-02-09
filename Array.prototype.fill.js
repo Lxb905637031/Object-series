@@ -21,7 +21,7 @@ Array.prototype.myFill = function() {
         end >> 0
 
     end = end < 0 ?
-        Math.mix(len + end, 0) :
+        Math.max(len + end, 0) :
         Math.min(end, len)
 
     while (start < end) {
